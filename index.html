@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+     <link rel="stylesheet" href="style.css">
+      <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+    .container {
+display: flex;
+}
+.sidebar {
+    width: 200px;
+    background-color: #fffefe;
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgb(0, 0, 0);
+}
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+.sidebar button {
+    display: block;
+    margin: 10px 0;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.sidebar .active {
+    font-weight: bold;
+}
+.main {
+    flex: 1;
+    padding: 30px;
+}
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #00b3ff;
+    border-radius: 6px;
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+}
+.user-info {
+    line-height: 1.5;
+}
+
+.user-info strong {
+    font-size: 16px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #00ffbf(236, 99% 50%);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-right: 4px;
+    }
+.tag.admin {
+    background-color: hsl(0, 0%, 55%);
+    color:(srgb rgb(9, 241, 148) );
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.aktif {
+    color: #0e01fff6;
+}
+.add-btn { position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: hsl(0, 0%, 65%);
+    border: none;
+    cursor: pointer;}
+
+.status.suspended {
+    color: rgb(1, 1, 126);
+    position: "status supended";
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: aliceblue(225, 17% 95%);
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        
+        <aside class="sidebar">
+            <h2>Connect</h2>
+            <nav>
+            <button class="active"> User</button>
+            <button> Hak Akses</button>
+            <button> Logout</button>
+            <nav>
+        </aside>
+        
+        <main class="main">
+            <input type="text" id="searchInput" placeholder="Cari user" />
+
+<div class="user-list" id="userList"\>
+    <div class="user-card">
+        <div class="user-info">
+            <strong>SyahiidIlmi</strong><br>
+            <span>2313042@universitasmulia.ac.id</span><br>
+            <span class="tag admin">Admin</span>
+            <span class="tag">Employee</span>
+        </div>
+        <span class="status aktif">Aktif</span>
+    </div>
+    
+    <div class="user-card">
+        <div class="user-info">
+            <strong>Rayhan</strong><br>
+            <span>2313031@universitasmulia.ac.id</span><br>
+            <span class="tag">Employee</span>
+        </div>
+        <span class="status aktif">Aktif</span>
+    </div>
+  
+    <div class="user-card">
+        <div class="user-info">
+            <strong>EvanGusti</strong><br>
+            <span>2313071@universitasmulia.ac.id</span><br>
+            <span class="tag">Employee</span>
+        </div>
+        <span class="status aktif">Aktif</span>
+    </div>
+    
+    <div class="user-card">
+        <div class="user-info">
+            <strong>Fauzi</strong><br>
+            <span>2313064@universitasmulia.ac.id</span><br>
+            <span class="tag">Employee</span>
+        </div>
+        <span class="status aktip">suspend</span>
+    </div>
+<div>
+
+<button class="add-btn">+</button>
+
+    </main>
+</div>
+</body>
+</html>
